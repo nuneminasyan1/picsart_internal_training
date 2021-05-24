@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -56,6 +57,12 @@ public class LoginPage extends BasePage {
         WebElement avatarIcon = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(avatarLocation));
         return avatarIcon.isDisplayed();
     }
+
+//    LoginPage loginPage = new LoginPage();
+//    Cookie cookie = new Cookie("user_key", "0726cbd7-ab76-4160-93d7-94cfd924c184");
+//    getDriver().manage().addCookie(cookie);
+//    getDriver().navigate().refresh();
+//    assertTrue(loginPage.isUserLoggedIn(), "user was not logged in");
 }
 
 

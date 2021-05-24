@@ -27,7 +27,7 @@ public class Challenges {
 
     @Test
     public void testChallenges() {
-        ChallengePage challengePage = new ChallengePage();
+        ChallengePage1 challengePage = new ChallengePage1();
         challengePage.goToDiscover();
         challengePage.clickChallenge();
         challengePage.enterChallenge();
