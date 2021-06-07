@@ -9,6 +9,8 @@ public class LoginPage extends TaigaBasePage {
     private final By usernameFieldLocation = By.cssSelector("[name='username']");
     private final By passwordFieldLocation = By.cssSelector("[name='password']");
     private final By loginButtonLocation = By.cssSelector("[class*='login-password']");
+    private final By avatarLocation = By.cssSelector("[class*='user-avatar']");
+
 
 
     public LoginPage() {
@@ -40,6 +42,13 @@ public class LoginPage extends TaigaBasePage {
     public void clickLoginButtonLocation() {
         click(loginButtonLocation);
 
+    }
+    public boolean isAvatarDisplayed() {
+        return find(avatarLocation).isDisplayed();
+    }
+    public boolean isUserLoggedIn() {
+        WebElement avatarIcon = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(avatarLocation));
+        return avatarIcon.isDisplayed();
     }
 
 

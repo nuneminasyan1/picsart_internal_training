@@ -32,6 +32,8 @@ public class LoginTest {
         loginPage.typePassword("aa12345");
         loginPage.clickLoginButtonLocation();
 
+        assertTrue(loginPage.isUserLoggedIn(), "user was not logged in");
+
 
     }
 }
