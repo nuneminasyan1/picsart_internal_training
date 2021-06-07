@@ -1,0 +1,10 @@
+<suite>
+    <listeners>
+        <listener class-name="listeners.TestListeners"/>
+    </listeners>
+    <test name="all-packages">
+        <packages>
+            <package name=" .*" />
+        </packages>
+    </test>
+</suite>

@@ -9,14 +9,14 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-public class Lesson3 {
+public class LoginTest {
     private WebDriver driver;
 
     @BeforeMethod
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "/Users/nuneminasyan/IdeaProjects/picsart_internal_training/src/chromedriver");
         driver = new ChromeDriver();
-        driver.get("https://picsart.com/");
+        driver.get("https://tree.taiga.io/login");
     }
 
     @AfterMethod
@@ -28,10 +28,12 @@ public class Lesson3 {
     public void firstTest() {
         LoginPage loginPage = new LoginPage();
         loginPage.clickLoginButton();
-        loginPage.typeUsername("smart_offer");
-        loginPage.typePassword("Lusin86");
-        loginPage.clickSignInButton();
+        loginPage.typeUsername("minasyanune");
+        loginPage.typePassword("aa12345");
+        loginPage.clickLoginButtonLocation();
 
         assertTrue(loginPage.isUserLoggedIn(), "user was not logged in");
+
+
     }
 }
