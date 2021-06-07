@@ -4,20 +4,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 
-
+import java.sql.ClientInfoStatus;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
-
 
 import static setup.DriverSetup.getDriver;
 
-public abstract class BasePage {
-    private static Logger LOGGER = Logger.getLogger(String.valueOf(BasePage.class));
+public abstract class TaigaBasePage {
     protected WebDriver driver;
-    public static final String BASE_URL = "https://picsart.com";
+    public static final String BASE_URL = "https://www.taiga.io/";
 
-    public BasePage() {
+    public TaigaBasePage() {
         this.driver = getDriver();
     }
 
@@ -35,7 +32,7 @@ public abstract class BasePage {
     }
 
     public List<WebElement> findAll(By location) {
-        LOGGER.info("Finding elements -> " + location.toString());
+        System.out.println("Finding elements -> " + location.toString());
         return driver.findElements(location);
     }
 
@@ -76,5 +73,4 @@ public abstract class BasePage {
         }
     }
 
-
-    }
+}
